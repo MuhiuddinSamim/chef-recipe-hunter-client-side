@@ -9,6 +9,8 @@ import Home from './Components/Home';
 import Contact from './Components/Contact';
 import ErrorPage from './Components/ErrorPage';
 import App from './App';
+import Registration from './Components/Registration';
+import Login from './Components/Login';
 
 
 const router = createBrowserRouter([
@@ -22,8 +24,12 @@ const router = createBrowserRouter([
           element: <Home></Home>, 
       },
       {
-          path: "/error",
-          element: <ErrorPage></ErrorPage>,
+          path: "/registration",
+          element: <Registration></Registration>
+      },
+      {
+        path:"/login",
+        element:<Login></Login>
       }
     ]
   },

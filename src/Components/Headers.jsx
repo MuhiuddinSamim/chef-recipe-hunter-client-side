@@ -52,7 +52,7 @@ Purchase
           </div>
 
           <div style={{ backgroundImage:`url(${image2})`,backgroundRepeat:"no-repeat",backgroundSize:"cover", 
-    height:600
+    height:500
     }} className='p-12 '>
         <div className='md:flex justify-between items-center'>
         <div className='w-25 '>
@@ -63,15 +63,12 @@ Purchase
             <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to='/'>Home</Link>
             </div>
             <div className='hover:bg-slate-100'>
-            <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to='/error'>Menus</Link>
+            <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to=''>Menus</Link>
             </div>
             <div className='hover:bg-slate-100'>
-            <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to=''>Blogs</Link>
-            </div>
-            <div className='hover:bg-slate-100'>
-            <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to=''>Registation</Link>
+            <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to='/registration'>Registation</Link>
             </div>  
-             <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reservation
+             <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><Link to='/blog'>Blog</Link>
           </button> 
           </div>
           
