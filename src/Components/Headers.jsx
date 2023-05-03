@@ -91,7 +91,7 @@ Purchase
             </div>   */}
              
              
-          {/* {
+          {
                     user ? <span className='sm:flex'><p className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'> {user.email}  </p>
                     <button onClick={handlelogOut} class=" bg-orange-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign Out</button></span> 
                    
@@ -108,7 +108,7 @@ Purchase
             </div>  
                       
                     </span>
-                } */}
+                }
                 <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><Link to='/blog'>Blog</Link>
           </button> 
           </div>
