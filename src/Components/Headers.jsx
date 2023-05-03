@@ -92,8 +92,8 @@ Purchase
              
              
           {
-                    user ? <span className='sm:flex'><p className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'> {user.email}  </p>
-                    <button onClick={handlelogOut} class=" bg-orange-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign Out</button></span> 
+                    user ? <span className='sm:flex'><p className='p-2 bg-blue-500 font-bold text-white'> {user.email}  </p>
+                    <button onClick={handlelogOut} class=" bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign Out</button></span> 
                    
                     :
                     <span className='md:flex'> 
