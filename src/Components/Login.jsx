@@ -32,7 +32,7 @@ const Login = () => {
         </div>
         <div className="text-grey-dark mt-6">
             Have an Account? 
-                              <Link to='/registration' className="no-underline border-b border-blue text-blue">
+                              <Link to='/registration' className="no-underline border-b border-blue p-1 bg-slate-300 text-blue">
                                    Sign up
                                    </Link>.
         </div>

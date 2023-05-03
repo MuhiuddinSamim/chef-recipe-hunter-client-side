@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaGoogle,FaGithub} from 'react-icons/fa';
+
 
 const Registration = () => {
     return (
@@ -34,15 +36,26 @@ const Registration = () => {
                         type="submit"
                         className="w-full text-center py-3 rounded bg-green-600 text-white-600 hover:bg-green-dark focus:outline-none my-1"
                     >Create Account</button>
-                    <div className="text-grey-dark mt-6">
+                    <div className="text-grey-dark mt-6 text-center">
                          Already have an account? 
-                              <Link to='/login' className="no-underline border-b border-blue text-blue">
+                              <Link to='/login' className="no-underline border-b border-blue text-blue p-1 bg-slate-300">
                                    Log in
                                    </Link>.
                     </div>
-                    <div>
-                        <p>Sign up with</p>
-                        
+                    <div className='text-center'>
+                        <h3>SignUp with</h3>
+                        <div className='sm:flex justify-center p-4'>
+                            <div className='bg-red-200 hover:bg-red-300 p-2 me-3'  > 
+                                <FaGoogle />
+                            </div>
+                            <div className='bg-red-200 hover:bg-red-300 ms-3 p-2'>
+                        <FaGithub/>
+
+                            </div>
+
+                        </div>
+
+
                     </div>
 
                   
