@@ -32,7 +32,7 @@ Welcome
 </button>
           <div>
             <Marquee className='text-xl font-medium'>
-              Get 25% discount on first Reservation.
+              Get 10% discount on first Reservation.
             </Marquee>
           </div>
         </div>
@@ -60,10 +60,10 @@ Purchase
         </div>         
         <div className='md:flex justify-center '>
           <div className='hover:bg-slate-100'>
-            <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to=''>Home</Link>
+            <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to='/'>Home</Link>
             </div>
             <div className='hover:bg-slate-100'>
-            <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to=''>Menus</Link>
+            <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to='/error'>Menus</Link>
             </div>
             <div className='hover:bg-slate-100'>
             <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to=''>Blogs</Link>
@@ -88,7 +88,7 @@ Purchase
         </div>
        
           </div>
-          <div className='p-48 bg-slate-300'>
+          {/* <div className='p-48 bg-slate-300'>
             <div className="carousel w-full ">
   <div id="slide1" className="carousel-item relative w-full">
     <img src={slider} className="w-full " />
@@ -120,7 +120,7 @@ Purchase
   </div>
 </div>
          
-          </div>
+          </div> */}
         
       </div>
     
