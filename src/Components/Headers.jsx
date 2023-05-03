@@ -71,14 +71,20 @@ Purchase
             </div>
             <div className='hover:bg-slate-100'>
             <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to='/registration'>Registation</Link>
-              {
+             
+          
+            </div>  
+            <div className='hover:bg-slate-100'>
+            <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to='/login'>Log-In</Link>
+             
+          
+            </div>  
+             {/* {
                     user ? <span>{user.email}  <button onClick={handlelogOut}>Sign Out</button></span> 
                    
                     :
                     <Link to="/login">Login</Link> 
-                }
-          
-            </div>  
+                } */}
              <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><Link to='/blog'>Blog</Link>
           </button> 
           </div>
