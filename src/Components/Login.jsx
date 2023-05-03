@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from './Providers/AuthProviders';
 
 const Login = () => {
+  const {user,logIn}=useContext(AuthContext)
   const [success,setSuccess]=useState('');
     const[error,setError]=useState('');
 
@@ -17,7 +19,18 @@ const Login = () => {
             setError('Minimum six characters, at least one letter, one number and one special character:');
             return;
         }
-    
+      logIn(email,password)
+        .then((userCredential) => { 
+         const LoggedUser = userCredential.user;
+         console.log(LoggedUser)
+          setSuccess('Congratulation');
+            form.reset();
+      })
+           .catch((error) => {
+          const errorMessage = error.message;
+          setError(errorMessage);
+        });
+          
   }
 
 
@@ -47,6 +60,8 @@ const Login = () => {
           <input type="password" name='password' required placeholder="password" className="input input-bordered" />
           
         </div>
+         <h2 className='text-xl text-green-800 text-center'>{success}</h2>
+          <h2 className=' text-red-800 text-center'>{error}</h2>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>

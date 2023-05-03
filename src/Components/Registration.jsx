@@ -5,7 +5,7 @@ import { AuthContext } from './Providers/AuthProviders';
 
 
 const Registration = () => {
-    const {user,createUser}=useContext(AuthContext);
+    const {user,createUser,signInGoogle,signInGit}=useContext(AuthContext);
     // console.log(createUser);
     const [success,setSuccess]=useState('');
     const[error,setError]=useState('');
@@ -26,8 +26,8 @@ const Registration = () => {
         }
         createUser(email,password)
           .then((userCredential) => {
-            const loggedUser = userCredential.user;
-            console.log(loggedUser);
+            const createdUser = userCredential.user;
+            console.log(createUser);
             setSuccess('Congratulation');
             form.reset();
 
@@ -37,9 +37,30 @@ const Registration = () => {
              setError(errorMessage);
             
             });
-        
-        
 
+    }
+
+    const handleGoogle=()=>{
+        signInGoogle()
+        .then((result) => {
+         const googleUser = result.user;
+         console.log(googleUser)
+        })
+        .catch((error) => {
+        const errorMessage = error.message;
+        });
+
+    }
+
+    const handleGitHub=()=>{
+        signInGit()
+        .then((result) => {
+         const gitUser = result.user;
+         console.log(gitUser)
+        })
+        .catch((error) => {
+        const errorMessage = error.message;
+        });
 
     }
 
@@ -102,10 +123,10 @@ const Registration = () => {
                     <div className='text-center'>
                         <h3>SignUp with</h3>
                         <div className='sm:flex justify-center p-4'>
-                            <div className='bg-red-200 hover:bg-red-300 p-2 me-3'  > 
+                            <div onClick={handleGoogle} className='bg-red-200 hover:bg-red-300 p-2 me-3'  > 
                                 <FaGoogle />
                             </div>
-                            <div className='bg-red-200 hover:bg-red-300 ms-3 p-2'>
+                            <div onClick={handleGitHub} className='bg-red-200 hover:bg-red-300 ms-3 p-2'>
                         <FaGithub/>
 
                             </div>
