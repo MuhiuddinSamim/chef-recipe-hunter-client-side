@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Marquee from "react-fast-marquee";
 import pic from './../img/logo@2x_white.png'
@@ -8,10 +8,14 @@ import image2 from './../img/img-5.jpg'
 import slider from './../img/slod.jpg'
 import slider2 from './../img/slider1jpg.jpg'
 import slider3 from './../img/slider6jpg.jpg'
+import { AuthContext } from './Providers/AuthProviders';
 
 
 
 const Headers = () => {
+  const {user}=useContext(AuthContext)
+
+
     return (
       <div >
           <div className='sm:flex justify-around bg-yellow-300 p-4'>
@@ -67,6 +71,13 @@ Purchase
             </div>
             <div className='hover:bg-slate-100'>
             <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to='/registration'>Registation</Link>
+              {
+                    user ? <span>{user.email}  <button onClick={handlelogOut}>Sign Out</button></span> 
+                   
+                    :
+                    <Link to="/login">Login</Link> 
+                }
+          
             </div>  
              <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><Link to='/blog'>Blog</Link>
           </button> 
