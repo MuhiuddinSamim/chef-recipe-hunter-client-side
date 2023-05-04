@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Marquee from "react-fast-marquee";
 import pic from './../img/logo@2x_white.png'
@@ -13,7 +13,14 @@ import { AuthContext } from './Providers/AuthProviders';
 
 
 const Headers = () => {
-  const {user,logOut}=useContext(AuthContext)
+  const {user,logOut}=useContext(AuthContext);
+
+ 
+
+
+
+
+
 
   const handlelogOut=()=>{
      logOut()
@@ -126,39 +133,8 @@ Purchase
         </div>
        
           </div>
-          {/* <div className='p-48 bg-slate-300'>
-            <div className="carousel w-full ">
-  <div id="slide1" className="carousel-item relative w-full">
-    <img src={slider} className="w-full " />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide4" className="btn btn-circle">❮</a> 
-      <a href="#slide2" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide2" className="carousel-item relative w-full">
-    <img src={slider2} className="w-full" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide1" className="btn btn-circle">❮</a> 
-      <a href="#slide3" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide3" className="carousel-item relative w-full">
-    <img src={slider3} className="w-full" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide2" className="btn btn-circle">❮</a> 
-      <a href="#slide4" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide4" className="carousel-item relative w-full">
-    <img src={image} className="w-full" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide3" className="btn btn-circle">❮</a> 
-      <a href="#slide1" className="btn btn-circle">❯</a>
-    </div>
-  </div>
-</div>
-         
-          </div> */}
+      
+       
         
       </div>
     

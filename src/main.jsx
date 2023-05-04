@@ -12,6 +12,7 @@ import App from './App';
 import Registration from './Components/Registration';
 import Login from './Components/Login';
 import AuthProviders from './Components/Providers/AuthProviders';
+import ViewDetails from './Components/ViewDetails';
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path:"/login",
         element:<Login></Login>
+      },
+      {
+        path:'/catagory/:id',
+        element:<ViewDetails> </ViewDetails>
       }
     ]
   },
