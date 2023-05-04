@@ -45,8 +45,8 @@ const Headers = () => {
 Welcome
 </button>
           <div>
-            <Marquee className='text-xl font-medium'>
-              Get 10% discount on first Reservation.
+              <Marquee className='text-xl font-medium'>
+              Best French food for Taste.Have a fency French..
             </Marquee>
           </div>
         </div>
@@ -92,7 +92,7 @@ Purchase
              
              
           {
-                    user ? <span className='sm:flex'><p className='p-2 bg-blue-500 font-bold text-white'> {user.email}  </p>
+                    user ? <span className='sm:flex'><p className='p-2 bg-blue-500 font-bold text-white '> {user.email}  </p>
                     <button onClick={handlelogOut} class=" bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign Out</button></span> 
                    
                     :
