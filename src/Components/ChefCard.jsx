@@ -10,7 +10,7 @@ const ChefCard = ({catagory}) => {
   <div className="card-body">
     <h2 className="card-title">
       {catagory.name}
-  <div className="justify-center badge badge-secondary p-4">{catagory.rating}</div>
+  <div className="justify-center badge badge-secondary p-4"> like: {catagory.rating}M</div>
       
     </h2>
     <p>{catagory.chefDetails}</p>

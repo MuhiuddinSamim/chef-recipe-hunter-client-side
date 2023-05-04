@@ -13,6 +13,8 @@ import Registration from './Components/Registration';
 import Login from './Components/Login';
 import AuthProviders from './Components/Providers/AuthProviders';
 import ViewDetails from './Components/ViewDetails';
+import Blogs from './Components/Blogs';
+import PrivateRoute from './Components/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -35,7 +37,11 @@ const router = createBrowserRouter([
       },
       {
         path:'/catagory/:id',
-        element:<ViewDetails> </ViewDetails>
+        element:<PrivateRoute><ViewDetails> </ViewDetails></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/chef/${params.id}`)
+      },{
+        path:'/blogs',
+        element:<Blogs></Blogs>
       }
     ]
   },

@@ -83,9 +83,7 @@ Purchase
           <div className='hover:bg-slate-100'>
             <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to='/'>Home</Link>
             </div>
-            <div className='hover:bg-slate-100'>
-            <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to=''>Menus</Link>
-            </div>
+         
             {/* <div className='hover:bg-slate-100'>
             <Link className='text-xl font-extrabold  hover:text-orange-700 m-6' to='/registration'>Registation</Link>
              
@@ -116,7 +114,7 @@ Purchase
                       
                     </span>
                 }
-                <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><Link to='/blog'>Blog</Link>
+                <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><Link to='/blogs'>Blog</Link>
           </button> 
           </div>
           
