@@ -12,7 +12,7 @@ const Home = () => {
    const [catagories,setCatagories]=useState([]);
 
   useEffect(()=>{
-    fetch("http://localhost:5000/chef")
+    fetch("https://assignment-10-server-muhiuddinsamim.vercel.app/chef")
     .then(res=>res.json())
     .then(data=>setCatagories(data))
     // .then(data=>console.log(data))
