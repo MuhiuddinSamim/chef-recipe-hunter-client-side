@@ -10,14 +10,17 @@ export const AuthContext=createContext(null);
 
 const AuthProviders = ({children}) => {
     const [user,setUser]=useState('')
+     const [loading,setLoading]=useState(true);
    
 
 
     const createUser=(email,password)=>{
+        setLoading(true);
         return createUserWithEmailAndPassword(auth,email,password)
     }
 
     const logIn=(email,password)=>{
+        setLoading(true);
         return signInWithEmailAndPassword(auth,email,password)
     }
     const signInGoogle=()=>{
@@ -34,6 +37,7 @@ const AuthProviders = ({children}) => {
         const unsubscribe=onAuthStateChanged(auth,currentUser=>{
             console.log('auth state change',currentUser);
             setUser(currentUser);
+            setLoading(false);
         })
         return ()=>{
             unsubscribe();
@@ -43,6 +47,7 @@ const AuthProviders = ({children}) => {
 
     const authInfo={
         user,
+        loading,
         createUser,
         logIn,
         signInGoogle,

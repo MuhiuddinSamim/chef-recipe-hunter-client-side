@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ChefCard = ({catagory}) => {
-    console.log(catagory.picture);
+    // console.log(catagory.picture);
     return (
         
               <div className="m-10 card  bg-base-100 box-shadow-2xl">
